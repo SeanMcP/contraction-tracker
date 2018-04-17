@@ -13,8 +13,8 @@ const Table = props => (
                     Start {props.chronological ? 'v' : '^'}
                 </th>
                 <th>Stop</th>
-                <th>Duration</th>
-                <th>Time between</th>
+                <th>Length</th>
+                <th>Frequency</th>
                 <th>Tools</th>
             </tr>
             {props.children}

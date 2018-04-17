@@ -14,12 +14,7 @@ class App extends React.Component {
             isRecording: false,
             record: [],
             start: null,
-            stopwatch: {
-                hh: 0,
-                mm: 0,
-                ss: 0,
-                fr: 0
-            },
+            stopwatch: '00:00:00:00'
         };
 
         this._deleteRecord = this._deleteRecord.bind(this);
@@ -44,6 +39,7 @@ class App extends React.Component {
                     Start:
                     {this.state.start ? moment(this.state.start).format(this.state.timeFormat) : null}
                 </h2>
+                {this.state.stopwatch}
                 <Table
                     chronological={this.state.chronological}
                     toggleChronological={this._toggleChronological}
@@ -86,16 +82,11 @@ class App extends React.Component {
 
         const record = this.state.record;
         record.push(newRecord);
-
+        
         this.setState({
             isRecording: false,
-            start: null,
-            stopwatch: {
-                mm: 0,
-                ss: 0,
-                fr: 0
-            },
-            record
+            record,
+            start: null
         });
     }
 
@@ -113,31 +104,9 @@ class App extends React.Component {
     }
 
     _runStopwatch() {
-        let hh = this.state.stopwatch.hh;
-        let mm = this.state.stopwatch.mm;
-        let ss = this.state.stopwatch.ss;
-        let fr = this.state.stopwatch.fr;
-
-        fr++;
-        if (fr === 100) {
-            ss++;
-            fr -= 100;
-        }
-        if (ss === 60) {
-            mm++;
-            ss -= 60;
-        }
-        if (mm === 60) {
-            hh++;
-            mm -= 60;
-        }
-        if (hh === 24) {
-            hh = 0;
-            mm = 0;
-            ss = 0;
-            fr = 0;
-        }
-        this.setState({ stopwatch: { hh, mm, ss, fr }});
+        const now = moment();
+        const difference = moment.utc(moment(now, "HH:mm:ss:SS").diff(moment(this.state.start, "DD/MM/YYYY HH:mm:ss:SS"))).format("HH:mm:ss:SS")
+        this.setState({ stopwatch: difference });
     }
 
     _toggleChronological() {
