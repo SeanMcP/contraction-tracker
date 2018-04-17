@@ -1,0 +1,48 @@
+.stopwatch {
+    background: var(--tray-bg);
+    bottom: 0;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    color: var(--tray-text);
+    left: 0;
+    padding: 20px;
+    position: fixed;
+    right: 0;
+}
+
+.stopwatch .button,
+.stopwatch .display {
+    text-align: center;
+}
+
+.stopwatch .display {
+    align-items: center;
+    display: flex;
+    font-size: 60px;
+    justify-content: center;
+    margin: 0 auto 10px;
+}
+
+.stopwatch .button {
+    border: 1px solid var(--tray-text);
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Colon */
+
+.colon {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    height: 20px;
+    justify-content: space-between;
+    margin: 4px 2px 0;
+}
+
+.colon div {
+    background: var(--tray-text);
+    border-radius: 4px;
+    height: 4px;
+    width: 4px;
+}

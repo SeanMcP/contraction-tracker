@@ -1,0 +1,20 @@
+tbody {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+tbody.reverse-chronological {
+    flex-direction: column-reverse;
+}
+
+tbody.reverse-chronological tr.head {
+    order: 1;
+}
+
+tr {
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 10px;
+    justify-items: flex-start;
+}

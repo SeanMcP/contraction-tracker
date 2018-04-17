@@ -1,0 +1,28 @@
+.hover {
+  color: gold;
+}
+
+.rated {
+  color: orange;
+}
+
+.rating {
+  display: flex;
+  font-weight: 700;
+}
+
+.rating {
+  color: gray;
+}
+
+.one div:first-child {
+  color: gold;
+}
+
+.two div:nth-child(-n+2) {
+  color: orange;
+}
+
+.three {
+  color: red;
+}
