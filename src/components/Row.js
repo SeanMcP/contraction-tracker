@@ -24,14 +24,13 @@ class Row extends React.Component {
         <td>{moment(current.start).format(this.props.timeFormat)}</td>
         <td>{moment(current.stop).format(this.props.timeFormat)}</td>
         <td>
-          {moment.duration(current.stop.diff(current.start)).as("seconds").toFixed(2)}s
+          {moment.duration(current.stop.diff(current.start)).as("seconds").toFixed(1)}s
         </td>
         <td>
           {previous ? (
-            //   moment
-            //     .duration(current.start.diff(previous.start, false))
-            //     .as("seconds").toFixed(2) + 'm'
-            current.start.diff(previous.start, 'seconds', true)
+              moment
+                .duration(current.start.diff(previous.start, false))
+                .as("minutes").toFixed(1) + 'm'
           ) : 'First'}
         </td>
         <td>

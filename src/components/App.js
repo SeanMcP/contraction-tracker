@@ -69,13 +69,7 @@ class App extends React.Component {
         const start = moment();
         this.setState({
             isRecording: true,
-            start,
-            stopwatch: {
-                hh: 0,
-                mm: 0,
-                ss: 0,
-                fr: 0
-            }
+            start
         });
         this.stopwatch = setInterval(this._runStopwatch, 10);
     }
@@ -96,11 +90,11 @@ class App extends React.Component {
         this.setState({
             isRecording: false,
             start: null,
-            // stopwatch: {
-            //     mm: 0,
-            //     ss: 0,
-            //     fr: 0
-            // },
+            stopwatch: {
+                mm: 0,
+                ss: 0,
+                fr: 0
+            },
             record
         });
     }

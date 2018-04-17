@@ -21,6 +21,7 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - Delete accidental entries
 
 ### To-do
+- Fix time bug
 - Format time to be more user friendly
 - Break out Row component into functional components
 - Styling
@@ -37,4 +38,4 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
   - Emoji: 🙁 😣 😩 (Clear?)
 
 ### Bugs
-- *crickets*
+- The stopwatch and moment-calculated difference are far off. Find a way to reconcile those numbers.
