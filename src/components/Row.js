@@ -28,9 +28,7 @@ class Row extends React.Component {
         </td>
         <td>
           {previous ? (
-              moment
-                .duration(current.start.diff(previous.start, false))
-                .as("minutes").toFixed(1) + 'm'
+            moment.utc(moment(current.start, "HH:mm:ss").diff(moment(previous.start, "HH:mm:ss"))).format("HH:mm:ss")
           ) : 'First'}
         </td>
         <td>

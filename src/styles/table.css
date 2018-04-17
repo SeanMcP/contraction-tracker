@@ -18,3 +18,12 @@ tr {
     grid-gap: 10px;
     justify-items: flex-start;
 }
+
+th, td {
+    display: flex;
+    align-items: center
+}
+
+.flipped {
+    transform: scaleY(-1);
+}

@@ -105,7 +105,7 @@ class App extends React.Component {
 
     _runStopwatch() {
         const now = moment();
-        const difference = moment.utc(moment(now, "HH:mm:ss:SS").diff(moment(this.state.start, "DD/MM/YYYY HH:mm:ss:SS"))).format("HH:mm:ss:SS")
+        const difference = moment.utc(moment(now, "HH:mm:ss:SS").diff(moment(this.state.start, "HH:mm:ss:SS"))).format("HH:mm:ss:SS")
         this.setState({ stopwatch: difference });
     }
 

@@ -22,6 +22,7 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 
 ### To-do
 - Format time to be more user friendly
+  - Split frequency calculation by ':', then manipulate string to humanize
 - Break out Row component into functional components
 - Styling
 - Add style buttons at the top
