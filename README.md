@@ -21,7 +21,6 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - Delete accidental entries
 
 ### To-do
-- Fix time bug
 - Format time to be more user friendly
 - Break out Row component into functional components
 - Styling
@@ -36,6 +35,7 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
   - Exclamation mark: ❗
   - Lightning bolts: ⚡ or 🌩
   - Emoji: 🙁 😣 😩 (Clear?)
+- Counting second fractions seems too frantic. Consider limiting it to seconds.
 
 ### Bugs
 - The stopwatch and moment-calculated difference are far off. Find a way to reconcile those numbers.
