@@ -14,7 +14,7 @@ class App extends React.Component {
             isRecording: false,
             record: [],
             start: null,
-            stopwatch: '00:00:00:00'
+            stopwatch: '00:00:00'
         };
 
         this._deleteRecord = this._deleteRecord.bind(this);
@@ -28,7 +28,7 @@ class App extends React.Component {
     render() {
         return (
             <div>
-                <div onClick={this._toggleTimeFormat}>{this.state.timeFormat === 'h:mm' ? '24-hour' : '12-hour'}</div>
+                <div onClick={this._toggleTimeFormat}>{this.state.timeFormat === 'h:mm a' ? '24-hour' : '12-hour'}</div>
                 <h1>Contraction Tracker</h1>
                 {this.state.isRecording ? (
                     <button onClick={this._handleStop}>Stop</button>
@@ -65,9 +65,10 @@ class App extends React.Component {
         const start = moment();
         this.setState({
             isRecording: true,
-            start
+            start,
+            stopwatch: '00:00:00'
         });
-        this.stopwatch = setInterval(this._runStopwatch, 10);
+        this.stopwatch = setInterval(this._runStopwatch, 1000);
     }
 
     _handleStop() {
@@ -105,7 +106,7 @@ class App extends React.Component {
 
     _runStopwatch() {
         const now = moment();
-        const difference = moment.utc(moment(now, "HH:mm:ss:SS").diff(moment(this.state.start, "HH:mm:ss:SS"))).format("HH:mm:ss:SS")
+        const difference = moment.utc(moment(now, "HH:mm:ss").diff(moment(this.state.start, "HH:mm:ss"))).format("HH:mm:ss")
         this.setState({ stopwatch: difference });
     }
 

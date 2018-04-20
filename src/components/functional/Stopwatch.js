@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Stopwatch = (props) => (
     <section className="stopwatch">
         <div className="display">
-            {checkForHours(props.time)}
+            {props.time}
         </div>
         <div className="button" onClick={props.recording ? props.stop : props.start}>
             {props.recording ? 'Stop' : 'Start'}
@@ -13,13 +13,13 @@ const Stopwatch = (props) => (
     </section>
 );
 
-const checkForHours = (str) => {
-    const hours = str.slice(0, 2);
-    if (hours === '00') {
-        return str.slice(3);
-    }
-    return str;
-}
+// const checkForHours = (str) => {
+//     const hours = str.slice(0, 2);
+//     if (hours === '00') {
+//         return str.slice(3);
+//     }
+//     return str;
+// }
 
 Stopwatch.propTypes = {
     time: PropTypes.string.isRequired,
