@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import Header from './functional/Header';
 import Row from './Row';
 import Table from './functional/Table';
 import Stopwatch from './functional/Stopwatch';
@@ -27,19 +28,15 @@ class App extends React.Component {
     }
     render() {
         return (
-            <div>
-                <div onClick={this._toggleTimeFormat}>{this.state.timeFormat === 'h:mm a' ? '24-hour' : '12-hour'}</div>
-                <h1>Contraction Tracker</h1>
-                {this.state.isRecording ? (
-                    <button onClick={this._handleStop}>Stop</button>
-                ) : (
-                        <button onClick={this._handleStart}>Start</button>
-                    )}
+            <div id="app">
+                <Header
+                    handleTimeFormatChange={this._toggleTimeFormat}
+                    timeFormat={this.state.timeFormat}
+                />
                 <h2>
-                    Start:
+                    Start Time:
                     {this.state.start ? moment(this.state.start).format(this.state.timeFormat) : null}
                 </h2>
-                {this.state.stopwatch}
                 <Table
                     chronological={this.state.chronological}
                     toggleChronological={this._toggleChronological}

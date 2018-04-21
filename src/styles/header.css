@@ -1,0 +1,14 @@
+#app header {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+#app header h1 {
+    margin: 0;
+}
+
+.time-toggle > * {
+    vertical-align: middle;
+}

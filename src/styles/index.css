@@ -1,5 +1,7 @@
 @import './variables.css';
 @import './materialIcons.css';
+
+@import './header.css';
 @import './rating.css';
 @import './rowTools.css';
 @import './stopwatch.css';
