@@ -13,7 +13,6 @@ const Table = props => (
                 }>
                     Start <Icon icon="sort" size={props.chronological ? 'md-18' : 'md-18 flipped'}/>
                 </th>
-                <th>Stop</th>
                 <th>Length</th>
                 <th>Frequency</th>
                 <th>Tools</th>

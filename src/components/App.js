@@ -11,7 +11,7 @@ class App extends React.Component {
 
         this.state = {
             chronological: true,
-            timeFormat: 'h:mm a',
+            timeFormat: 'h:mm',
             isRecording: false,
             record: [],
             start: null,
@@ -112,7 +112,7 @@ class App extends React.Component {
     }
 
     _toggleTimeFormat() {
-        this.setState({ timeFormat: this.state.timeFormat === 'h:mm a' ? 'H:mm' : 'h:mm a'});
+        this.setState({ timeFormat: this.state.timeFormat === 'h:mm' ? 'H:mm' : 'h:mm'});
     }
 
     _updateRecord(startTime, newRating) {

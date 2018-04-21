@@ -1,3 +1,8 @@
+table {
+    padding: 20px;
+    width: 100%;
+}
+
 tbody {
     display: flex;
     flex-flow: column nowrap;
@@ -14,7 +19,7 @@ tbody.reverse-chronological tr.head {
 tr {
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     grid-gap: 10px;
     justify-items: flex-start;
 }

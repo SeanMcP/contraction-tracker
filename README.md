@@ -21,8 +21,6 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - Delete accidental entries
 
 ### To-do
-- Format time to be more user friendly
-  - Split frequency calculation by ':', then manipulate string to humanize
 - Break out Row component into functional components
 - Styling
 - Add style buttons at the top
@@ -35,10 +33,6 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
   - Exclamation mark: ❗
   - Lightning bolts: ⚡ or 🌩
   - Emoji: 🙁 😣 😩 (Clear?)
-- Time difference format should be:
-  - Less than one minute: 33.2s
-  - More than one minute: 2m 33s
-  - More than one hour: 1h 2m
 - Flash notification when frequency is at certain point (change color)
 
 ### Bugs

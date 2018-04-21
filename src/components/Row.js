@@ -22,13 +22,12 @@ class Row extends React.Component {
           <Rating item={current} update={this.props.update}/>
         </td>
         <td>{moment(current.start).format(this.props.timeFormat)}</td>
-        <td>{moment(current.stop).format(this.props.timeFormat)}</td>
         <td>
-          {moment.duration(current.stop.diff(current.start)).as("seconds").toFixed(1)}s
+          {this._difference(current.stop, current.start)}
         </td>
         <td>
           {previous ? (
-            moment.utc(moment(current.start, "HH:mm:ss").diff(moment(previous.start, "HH:mm:ss"))).format("HH:mm:ss")
+            this._difference(current.start, previous.start)
           ) : 'First'}
         </td>
         <td>
@@ -42,6 +41,31 @@ class Row extends React.Component {
         </td>
       </tr>
     );
+  }
+
+  _difference(time1, time2) {
+    const format = 'H:m:s:S';
+    const difference = moment.utc(moment(time1, format).diff(moment(time2, format))).format(format);
+    return this._humanizeTime(difference);
+  }
+
+  _humanizeTime(timeString) {
+    const timeArray = timeString.split(':');
+    const h = timeArray[0];
+    const m = timeArray[1];
+    const s = timeArray[2];
+    const f = timeArray[3];
+    
+    if (Number(h) > 0) {
+      return `${h}h ${m}m`;
+    }
+    if (Number(m) > 0) {
+      return `${m}m ${s}s`;
+    }
+    if (Number(s) > 0) {
+      return `${s}.${f}s`;
+    }
+    return `0.${f}s`;
   }
 
   _setTools(bool) {
