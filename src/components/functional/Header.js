@@ -1,10 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import ColorOptions from './ColorOptions';
 import TimeToggle from './TimeToggle';
 
 const Header = props => (
     <header>
         <h1>Contraction Tracker</h1>
+        <ColorOptions
+            handleChange={props.setStyle}
+        />
         <TimeToggle
             handleChange={props.handleTimeFormatChange}
             timeFormat={props.timeFormat}
@@ -14,6 +18,7 @@ const Header = props => (
 
 Header.propTypes = {
     handleTimeFormatChange: PropTypes.func.isRequired,
+    setStyle: PropTypes.func.isRequired,
     timeFormat: PropTypes.string.isRequired,
 };
 

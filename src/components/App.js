@@ -15,22 +15,25 @@ class App extends React.Component {
             isRecording: false,
             record: [],
             start: null,
-            stopwatch: '00:00:00'
+            stopwatch: '00:00:00',
+            style: 'green'
         };
 
         this._deleteRecord = this._deleteRecord.bind(this);
         this._handleStart = this._handleStart.bind(this);
         this._handleStop = this._handleStop.bind(this);
         this._runStopwatch = this._runStopwatch.bind(this);
+        this._setStyle = this._setStyle.bind(this);
         this._toggleChronological = this._toggleChronological.bind(this);
         this._toggleTimeFormat = this._toggleTimeFormat.bind(this);
         this._updateRecord = this._updateRecord.bind(this);
     }
     render() {
         return (
-            <div id="app">
+            <div id="app" className={this.state.style}>
                 <Header
                     handleTimeFormatChange={this._toggleTimeFormat}
+                    setStyle={this._setStyle}
                     timeFormat={this.state.timeFormat}
                 />
                 <h2>
@@ -105,6 +108,11 @@ class App extends React.Component {
         const now = moment();
         const difference = moment.utc(moment(now, "HH:mm:ss").diff(moment(this.state.start, "HH:mm:ss"))).format("HH:mm:ss")
         this.setState({ stopwatch: difference });
+    }
+
+    _setStyle(colorString) {
+        console.log('changing to', colorString);
+        this.setState({ style: colorString });
     }
 
     _toggleChronological() {
