@@ -1,6 +1,6 @@
 import React from "react";
 import moment from "moment";
-import Rating from "./Rating";
+import Rating from "./functional/Rating";
 import RowTools from './functional/RowTools';
 
 class Row extends React.Component {

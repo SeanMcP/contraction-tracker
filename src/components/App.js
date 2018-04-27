@@ -57,7 +57,7 @@ class App extends React.Component {
     }
 
     _deleteRecord(startTime) {
-        const record = this.state.record.filter(item => item.start !== startTime);
+        const record = [...this.state.record].filter(item => item.start !== startTime);
         this.setState({ record });
     }
 
@@ -83,7 +83,7 @@ class App extends React.Component {
 
         const record = this.state.record;
         record.push(newRecord);
-        
+
         this.setState({
             isRecording: false,
             record,
@@ -111,7 +111,6 @@ class App extends React.Component {
     }
 
     _setStyle(colorString) {
-        console.log('changing to', colorString);
         this.setState({ style: colorString });
     }
 
@@ -124,7 +123,7 @@ class App extends React.Component {
     }
 
     _updateRecord(startTime, newRating) {
-        let record = this.state.record;
+        const record = [...this.state.record];
         record.forEach(item => {
             if (item.start === startTime) {
                 item.rating = newRating;
