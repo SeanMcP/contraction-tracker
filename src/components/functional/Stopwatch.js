@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 const Stopwatch = (props) => (
     <section className="stopwatch">
         <div className={`display${props.time !== '00:00:00' && !props.recording ? ' flashing' : ''}`}>
-            {props.time}
+            {insertColon(props.time)}
         </div>
         <div className="button" onClick={props.recording ? props.stop : props.start}>
             {props.recording ? 'Stop' : 'Start'}
@@ -15,6 +15,17 @@ const Stopwatch = (props) => (
         </div>
     </section>
 );
+
+const insertColon = timeString => {
+    const output = [];
+    const timeArray = timeString.split(':');
+    timeArray.forEach(item => {
+        output.push(<span key={output.length}>{item}</span>);
+        output.push(<span className="colon" key={output.length}/>);
+    });
+    output.pop();
+    return output;
+}
 
 Stopwatch.propTypes = {
     time: PropTypes.string.isRequired,

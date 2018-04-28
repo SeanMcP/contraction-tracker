@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ColorOptions from './ColorOptions';
 import TimeToggle from './TimeToggle';
+// import Logo from '../contraction-tracker.svg';
 
 const Header = props => (
     <header>
