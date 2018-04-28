@@ -2,18 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import ColorOptions from './ColorOptions';
 import TimeToggle from './TimeToggle';
-// import Logo from '../contraction-tracker.svg';
+// import logo from '../../logo.svg';
+// <img src={logo} className="app-logo" alt="Contraction Tracker" />
 
 const Header = props => (
     <header>
         <h1>Contraction Tracker</h1>
-        <ColorOptions
-            handleChange={props.setStyle}
-        />
-        <TimeToggle
-            handleChange={props.handleTimeFormatChange}
-            timeFormat={props.timeFormat}
-        />
+        <div className="tools">
+            <ColorOptions
+                handleChange={props.setStyle}
+            />
+            <TimeToggle
+                handleChange={props.handleTimeFormatChange}
+                timeFormat={props.timeFormat}
+            />
+        </div>
     </header>
 );
 

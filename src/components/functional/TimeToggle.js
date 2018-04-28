@@ -11,7 +11,9 @@ const TimeToggle = (props) => (
             help="Toggle time format"
             icon="access_time"
         />
-        {props.timeFormat === 'h:mm' ? '12-hr' : '24-hr'}
+        <span>
+            {props.timeFormat === 'h:mm' ? '12' : '24'}
+        </span>
     </div>
 );
 

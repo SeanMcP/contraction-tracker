@@ -1,6 +1,8 @@
 :root {
+    --animate:         200ms ease-in-out;
     --main-bg:         #FFCDD2;
     --main-text:       rgba(0, 0, 0, 0.75);
+    --main-text-light: rgba(0, 0, 0, 0.6);
     --tray-bg:         rgba(255, 255, 255, 0.6);
     --tray-text:       rgba(0, 0, 0, 0.6);
 }

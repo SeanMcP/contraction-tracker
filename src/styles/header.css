@@ -10,6 +10,23 @@
     margin: 0;
 }
 
+#app header .tools {
+    display: flex;
+}
+
+.time-toggle {
+    margin-left: 20px;
+}
+
+.time-toggle:hover {
+    color: var(--main-text-light);
+}
+
 .time-toggle > * {
     vertical-align: middle;
+}
+
+.time-toggle span {
+    margin-left: 2.5px;
+    transition: color var(--animate);
 }
