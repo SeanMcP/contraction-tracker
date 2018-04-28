@@ -4,6 +4,7 @@ section.display {
     font-weight: bold;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+    height: 25px;
     padding: 0 20px;
 }
 
@@ -11,6 +12,6 @@ section.display span {
     margin-left: 5px;
 }
 
-section.display .stop {
+section.display div {
     animation: fade-in 200ms ease-in-out;
 }

@@ -3,15 +3,17 @@ import PropTypes from 'prop-types';
 
 const Display = ({ start, stop }) => (
     <section className="display">
-        <div className="start">
-            Start:
-            <span>{start}</span>
-        </div>
+        {start ? (
+            <div className="start">
+                Start:
+                <span>{start}</span>
+            </div>
+        ) : null}
         {stop ? (
             <div className="stop">
                 Stop:
                 <span>{stop}</span>
-            </div>    
+            </div>
         ) : null}
     </section>
 );
