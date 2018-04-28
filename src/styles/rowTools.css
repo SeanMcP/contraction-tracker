@@ -1,3 +1,6 @@
 .row-tools {
-    display: flex;
+    animation: fade-in var(--animate);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2.5px;
 }
