@@ -19,13 +19,13 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - List contractions in chronological or reverse-chronological order
 - Rank the pain of each contraction on a scale of 0 to !!!
 - Delete accidental entries
+- Change the color of the app to match your fancy
 
 ### To-do
-- Break out Row component into functional components
 - Styling
-- Add style buttons at the top
-- Add manifest.json
 - Create logo and favicon
+- Remove blinking stopwatch
+- Return stopwatch to 0 after stop
 
 ### Considerations
 - Rating system options:
@@ -34,6 +34,8 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
   - Lightning bolts: ⚡ or 🌩
   - Emoji: 🙁 😣 😩 (Clear?)
 - Flash notification when frequency is at certain point (change color)
+- Inspirational messages
+- Input/display baby's name
 
 ### Bugs
 - *crickets*
