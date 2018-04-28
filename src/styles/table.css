@@ -17,6 +17,7 @@ tbody.reverse-chronological tr.head {
 }
 
 tr {
+    animation: fade-in 200ms ease-in-out;
     align-items: center;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
