@@ -1,5 +1,6 @@
 import React from 'react';
 import moment from 'moment';
+import Display from './functional/Display';
 import Header from './functional/Header';
 import Row from './Row';
 import Table from './functional/Table';
@@ -15,11 +16,13 @@ class App extends React.Component {
             isRecording: false,
             record: [],
             start: null,
+            stop: null,
             stopwatch: '00:00:00',
             style: 'green'
         };
 
         this._deleteRecord = this._deleteRecord.bind(this);
+        this._formatTimeIfPresent = this._formatTimeIfPresent.bind(this);
         this._handleStart = this._handleStart.bind(this);
         this._handleStop = this._handleStop.bind(this);
         this._runStopwatch = this._runStopwatch.bind(this);
@@ -36,10 +39,10 @@ class App extends React.Component {
                     setStyle={this._setStyle}
                     timeFormat={this.state.timeFormat}
                 />
-                <h2>
-                    Start Time:
-                    {this.state.start ? moment(this.state.start).format(this.state.timeFormat) : null}
-                </h2>
+                <Display
+                    start={this._formatTimeIfPresent(this.state.start)}
+                    stop={this._formatTimeIfPresent(this.state.stop)}
+                />
                 <Table
                     chronological={this.state.chronological}
                     toggleChronological={this._toggleChronological}
@@ -61,11 +64,18 @@ class App extends React.Component {
         this.setState({ record });
     }
 
+    _formatTimeIfPresent(time) {
+        if (time) {
+            return moment(time).format(this.state.timeFormat);
+        }
+    }
+
     _handleStart() {
         const start = moment();
         this.setState({
             isRecording: true,
             start,
+            stop: null,
             stopwatch: '00:00:00'
         });
         this.stopwatch = setInterval(this._runStopwatch, 1000);
@@ -81,13 +91,13 @@ class App extends React.Component {
             rating: 'zero'
         };
 
-        const record = this.state.record;
+        const record = [...this.state.record];
         record.push(newRecord);
 
         this.setState({
             isRecording: false,
             record,
-            start: null
+            stop
         });
     }
 
