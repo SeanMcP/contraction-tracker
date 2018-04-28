@@ -22,7 +22,7 @@
     margin: 0 auto 10px;
 }
 
-.stopwatch .display.flashing {
+.stopwatch .display.flashing span:not(.colon) {
     animation: flashing-text 1s infinite;
 }
 
@@ -36,17 +36,17 @@
 /* Colon */
 
 .colon {
-    align-items: center;
     display: flex;
     flex-flow: column nowrap;
     height: 20px;
     justify-content: space-between;
-    margin: 4px 2px 0;
 }
 
-.colon div {
+.colon::before, .colon::after {
     background: var(--tray-text);
-    border-radius: 4px;
-    height: 4px;
-    width: 4px;
+    border-radius: 5px;
+    content: '';
+    height: 5px;
+    margin: 0 2.5px;
+    width: 5px;
 }
