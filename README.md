@@ -23,8 +23,7 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 
 ### To-do
 - Styling
-- Create logo and favicon
-- Return stopwatch to 0 after stop
+- Create (a better) logo and favicon
 
 ### Considerations
 - Flash notification when frequency is at certain point (change color)

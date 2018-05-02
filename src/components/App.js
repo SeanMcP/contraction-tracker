@@ -87,7 +87,7 @@ class App extends React.Component {
 
         const newRecord = {
             start: this.state.start,
-            stop,
+            stop,            
             rating: 'zero'
         };
 
@@ -97,7 +97,8 @@ class App extends React.Component {
         this.setState({
             isRecording: false,
             record,
-            stop
+            stop,
+            stopwatch: '00:00:00'
         });
     }
 
