@@ -7,22 +7,19 @@
 }
 
 .rating {
+  color: var(--main-text);
   display: flex;
   font-weight: 700;
 }
 
-.rating {
-  color: gray;
+.rating div {
+  cursor: pointer;
+  margin: 0 -2px;
+  opacity: 0.35;
 }
 
-.one div:first-child {
-  color: gold;
-}
-
-.two div:nth-child(-n+2) {
-  color: orange;
-}
-
-.three {
-  color: red;
+.one div:first-child,
+.two div:nth-child(-n+2),
+.three div {
+  opacity: 1;
 }

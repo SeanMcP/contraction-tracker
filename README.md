@@ -24,15 +24,9 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 ### To-do
 - Styling
 - Create logo and favicon
-- Remove blinking stopwatch
 - Return stopwatch to 0 after stop
 
 ### Considerations
-- Rating system options:
-  - Ow Ow Ow
-  - Exclamation mark: ❗
-  - Lightning bolts: ⚡ or 🌩
-  - Emoji: 🙁 😣 😩 (Clear?)
 - Flash notification when frequency is at certain point (change color)
 - Inspirational messages
 - Input/display baby's name
