@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ColorOptions from './ColorOptions';
 import TimeToggle from './TimeToggle';
 // import logo from '../../logo.svg';
-// <img src={logo} className="app-logo" alt="Contraction Tracker" />
+// import whiteLogo from '../../whiteLogo.svg';
 
 const Header = props => (
     <header>

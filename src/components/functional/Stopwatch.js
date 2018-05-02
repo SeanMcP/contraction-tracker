@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 const Stopwatch = (props) => (
     <section className="stopwatch">
-        <div className={`display${props.time !== '00:00:00' && !props.recording ? ' flashing' : ''}`}>
+        <div className="display">
             {insertColon(props.time)}
         </div>
         <div className="button" onClick={props.recording ? props.stop : props.start}>

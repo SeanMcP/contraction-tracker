@@ -22,10 +22,6 @@
     margin: 0 auto 10px;
 }
 
-.stopwatch .display.flashing span:not(.colon) {
-    animation: flashing-text 1s infinite;
-}
-
 .stopwatch .button {
     border: 1px solid var(--tray-text);
     border-radius: 10px;
