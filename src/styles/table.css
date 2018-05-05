@@ -1,4 +1,5 @@
 table {
+    margin-bottom: 176px;
     padding: var(--space);
     width: 100%;
 }

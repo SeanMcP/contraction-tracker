@@ -27,3 +27,7 @@ body {
 .click {
   cursor: pointer;
 }
+
+strong {
+  font-weight: 700;
+}

@@ -11,6 +11,7 @@ class Row extends React.Component {
 
         this._hideTools = this._setTools.bind(this, false);
         this._showTools = this._setTools.bind(this, true);
+        this._toggleTools = this._toggleTools.bind(this, true);
     }
     render() {
         const current = this.props.arr[this.props.i];
@@ -34,6 +35,7 @@ class Row extends React.Component {
                         delete={() => this.props.delete(current.start)}
                         hide={this._hideTools}
                         show={this._showTools}
+                        toggle={this._toggleTools}
                         update={() => {
                             this.props.update(current.start, 'zero');
                             this._hideTools();
@@ -73,6 +75,10 @@ class Row extends React.Component {
 
     _setTools(bool) {
         this.setState({ showTools: bool });
+    }
+
+    _toggleTools() {
+        this.setState({ showTools: !this.state.showTools });
     }
 }
 

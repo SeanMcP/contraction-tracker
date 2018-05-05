@@ -1,29 +1,48 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from './Icon';
 
-const RowTools = props => {
-    if (props.display) {
-        return (
-            <div className="row-tools">
-                <div onClick={props.update}><Icon help="Clear rating" icon="refresh"/></div>
-                <div onClick={props.delete}><Icon help="Delete record" icon="delete"/></div>
-                <div onClick={props.hide}><Icon help="Hide menu" icon="check"/></div>
-            </div>
-        );
-    }
-    return (
-        <div className="click" onClick={props.show}>
-            <Icon icon="mode_edit"/>
+const RowTools = props => (
+    <div className="row-tools">
+        <div
+            className="button click inherit-color-hover"
+            onClick={props.toggle}
+        >
+            Edit
         </div>
-    )
-};
+        {props.display ? (
+            <div className="wrapper">
+                <ul className="menu">
+                    <li
+                        className="click inherit-color-hover"
+                        onClick={props.update}
+                    >
+                        <span>Clear rating</span>
+                    </li>
+                    <li
+                        className="click inherit-color-hover"
+                        onClick={props.delete}
+                    >
+                        <span>Delete record</span>
+                    </li>
+                    <li
+                        className="click inherit-color-hover"
+                        onClick={props.hide}
+                    >
+                        <strong>Done</strong>
+                    </li>
+                </ul>
+                <div className="overlay" onClick={props.toggle} />
+            </div>
+        ) : null}
+    </div>
+);
 
 RowTools.propTypes = {
     display: PropTypes.bool.isRequired,
     delete: PropTypes.func.isRequired,
     hide: PropTypes.func.isRequired,
     show: PropTypes.func.isRequired,
+    toggle: PropTypes.func.isRequired,
     update: PropTypes.func.isRequired
 }
 
