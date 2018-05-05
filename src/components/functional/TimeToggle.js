@@ -6,9 +6,7 @@ const TimeToggle = (props) => (
         className="time-toggle click inherit-color-hover"
         onClick={props.handleChange}
     >
-        <span>
-            {props.timeFormat === 'h:mm' ? '12 hr' : '24 hr'}
-        </span>
+        {props.timeFormat === 'h:mm' ? '12 hr' : '24 hr'}
     </div>
 );
 

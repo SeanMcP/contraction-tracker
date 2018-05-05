@@ -22,6 +22,8 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - Change the color of the app to match your fancy
 
 ### To-do
+- Animate transitions
+- Desktop view
 - Reset all button
 
 ### Considerations

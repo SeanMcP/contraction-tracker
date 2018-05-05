@@ -8,7 +8,11 @@ import TimeToggle from './TimeToggle';
 const Header = props => (
     <header className="inherit-border">
         <div className="logo">
-            <img src="./images/logo.png" alt="Contraction Tracker"/>
+            <img
+                alt="Contraction Tracker"
+                src="./images/logo.png"
+                title="Contraction Tracker"
+            />
             <h1>Contraction Tracker</h1>
         </div>
         <div className="tools">

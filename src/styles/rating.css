@@ -2,6 +2,7 @@
   color: var(--main-text);
   display: flex;
   font-weight: 700;
+  margin-left: -4px;
 }
 
 .rating div {

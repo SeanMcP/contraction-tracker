@@ -27,17 +27,13 @@ header .tools {
 }
 
 header .time-toggle {
+    align-items: center;
     display: flex;
     margin-left: var(--space);
 }
 
 header .time-toggle:hover {
     color: var(--main-text-light);
-}
-
-.time-toggle span {
-    margin-left: 2.5px;
-    transition: color var(--animate);
 }
 
 @media (max-width: 500px) {
