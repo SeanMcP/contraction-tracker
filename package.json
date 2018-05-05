@@ -1,18 +1,27 @@
 {
-  "name": "contraction-tracker-cra",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "moment": "^2.22.1",
-    "npm": "^6.0.0",
-    "react": "^16.3.2",
-    "react-dom": "^16.3.2",
-    "react-scripts": "1.1.4"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "name": "contraction-tracker",
+    "homepage": "https://seanmcp.github.io/contraction-tracker",
+    "version": "0.1.0",
+    "author": "Sean McPherson <sean@seanmcp.com> (http://github.com/seanmcp)",
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/seanmcp/contraction-tracker.git"
+    },
+    "private": true,
+    "dependencies": {
+        "gh-pages": "^1.1.0",
+        "moment": "^2.22.1",
+        "npm": "^6.0.0",
+        "react": "^16.3.2",
+        "react-dom": "^16.3.2",
+        "react-scripts": "1.1.4"
+    },
+    "scripts": {
+        "predeploy": "npm run build",
+        "deploy": "gh-pages -d build",
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject"
+    }
 }
