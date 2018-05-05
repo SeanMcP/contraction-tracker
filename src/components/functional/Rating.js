@@ -3,14 +3,20 @@ import PropTypes from 'prop-types';
 import Icon from './Icon';
 
 const Rating = ({ item: { rating, start }, update }) => (
-    <div className={"rating " + rating}>
-        <div onClick={() => update(start, 'one')}>
+    <div className="rating">
+        <div 
+            className={rating !== 'zero' ? 'inherit-color' : ''}
+            onClick={() => update(start, 'one')}>
             <Icon icon="flash_on" size="md-18"/>
         </div>
-        <div onClick={() => update(start, 'two')}>
+        <div 
+            className={rating === 'two' || rating === 'three' ? 'inherit-color' : ''}
+            onClick={() => update(start, 'two')}>
             <Icon icon="flash_on" size="md-18"/>
         </div>
-        <div onClick={() => update(start, 'three')} >
+        <div 
+            className={rating === 'three' ? 'inherit-color' : ''}
+            onClick={() => update(start, 'three')} >
             <Icon icon="flash_on" size="md-18"/>
         </div>
     </div>

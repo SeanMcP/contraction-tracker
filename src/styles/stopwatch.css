@@ -2,9 +2,9 @@
     background: var(--tray-bg);
     bottom: 0;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
-    color: var(--tray-text);
+    color: var(--main-text);
     left: 0;
-    padding: 20px;
+    padding: var(--space);
     position: fixed;
     right: 0;
 }
@@ -19,14 +19,15 @@
     display: flex;
     font-size: 60px;
     justify-content: center;
-    margin: 0 auto 10px;
+    margin: 0 auto var(--space);
 }
 
 .stopwatch .button {
-    border: 1px solid var(--tray-text);
-    border-radius: 10px;
+    border: 1px solid var(--gray-light);
+    border-radius: var(--space);
     cursor: pointer;
-    padding: 10px;
+    padding: var(--space);
+    transition: all var(--animate-fast);
 }
 
 /* Colon */
@@ -39,10 +40,10 @@
 }
 
 .colon::before, .colon::after {
-    background: var(--tray-text);
-    border-radius: 5px;
+    background: var(--main-text);
+    border-radius: 4px;
     content: '';
-    height: 5px;
+    height: 4px;
     margin: 0 2.5px;
-    width: 5px;
+    width: 4px;
 }

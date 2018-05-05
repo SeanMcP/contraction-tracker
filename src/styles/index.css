@@ -10,10 +10,8 @@
 @import './stopwatch.css';
 @import './table.css';
 
-@import url('https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i');
-
 body {
-  font-family: 'Lato', Helvetica, Arial, sans-serif;
+  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   font-weight: 300;
   color: var(--main-text);
   padding: 0;
@@ -21,6 +19,7 @@ body {
 }
 
 #app {
+  background: white;
   height: 100vh;
   transition: background 200ms ease-in-out;
 }

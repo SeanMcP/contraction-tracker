@@ -7,11 +7,8 @@ const Stopwatch = (props) => (
         <div className="display">
             {insertColon(props.time)}
         </div>
-        <div className="button" onClick={props.recording ? props.stop : props.start}>
+        <div className="button inherit-color-hover inherit-border-hover" onClick={props.recording ? props.stop : props.start}>
             {props.recording ? 'Stop' : 'Start'}
-            {/* {props.recording
-                ? <Icon icon="stop" />
-                : <Icon icon="play_arrow" />} */}
         </div>
     </section>
 );
