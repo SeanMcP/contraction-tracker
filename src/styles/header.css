@@ -7,25 +7,41 @@
     padding: var(--space);
 }
 
-#app header h1 {
-    font-size: 20px;
-    margin: 0;
-}
-
-#app header .tools {
+header .logo {
+    align-items: center;
     display: flex;
 }
 
-.time-toggle {
+.logo img {
+    height: 24px;
+}
+
+.logo h1 {
+    font-size: 20px;
+    margin: 0 0 0 var(--space-xs);
+    max-height: 24px;
+}
+
+header .tools {
+    display: flex;
+}
+
+header .time-toggle {
     display: flex;
     margin-left: var(--space);
 }
 
-.time-toggle:hover {
+header .time-toggle:hover {
     color: var(--main-text-light);
 }
 
 .time-toggle span {
     margin-left: 2.5px;
     transition: color var(--animate);
+}
+
+@media (max-width: 500px) {
+    .logo h1 {
+        display: none;
+    }
 }

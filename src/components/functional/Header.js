@@ -7,7 +7,10 @@ import TimeToggle from './TimeToggle';
 
 const Header = props => (
     <header className="inherit-border">
-        <h1>Contraction Tracker</h1>
+        <div className="logo">
+            <img src="./images/logo.png" alt="Contraction Tracker"/>
+            <h1>Contraction Tracker</h1>
+        </div>
         <div className="tools">
             <ColorOptions
                 handleChange={props.setStyle}
