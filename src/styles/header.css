@@ -1,13 +1,14 @@
-#app header {
-    align-items: center;
+header {
     border-bottom: 1px solid var(--gray-light);
-    /* color: white; */
+}
+header .wrapper {
+    align-items: center;
     display: flex;
     justify-content: space-between;
     padding: var(--space);
 }
 
-header .logo {
+.wrapper .logo {
     align-items: center;
     display: flex;
 }
@@ -22,17 +23,17 @@ header .logo {
     max-height: 24px;
 }
 
-header .tools {
+.wrapper .tools {
     display: flex;
 }
 
-header .time-toggle {
+.wrapper .time-toggle {
     align-items: center;
     display: flex;
     margin-left: var(--space);
 }
 
-header .time-toggle:hover {
+.wrapper .time-toggle:hover {
     color: var(--main-text-light);
 }
 

@@ -23,7 +23,6 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 
 ### To-do
 - Animate transitions
-- Desktop view
 - Reset all button
 
 ### Considerations

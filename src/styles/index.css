@@ -31,3 +31,21 @@ body {
 strong {
   font-weight: 700;
 }
+
+/* Desktop view */
+
+header .wrapper,
+.display,
+#app table,
+.stopwatch .wrapper {
+    margin: 0 auto;
+    max-width: 800px;
+}
+
+@media (min-width: 800px) {
+    table {
+      padding-left: 0;
+      padding-right: 0;
+    }
+}
+

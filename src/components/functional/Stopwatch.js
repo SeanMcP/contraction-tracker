@@ -4,11 +4,13 @@ import PropTypes from 'prop-types';
 
 const Stopwatch = (props) => (
     <section className="stopwatch">
-        <div className="display">
-            {insertColon(props.time)}
-        </div>
-        <div className="button inherit-color inherit-border-hover" onClick={props.recording ? props.stop : props.start}>
-            {props.recording ? 'Stop' : 'Start'}
+        <div className="wrapper">
+            <div className="display">
+                {insertColon(props.time)}
+            </div>
+            <div className="button inherit-color inherit-border-hover" onClick={props.recording ? props.stop : props.start}>
+                {props.recording ? 'Stop' : 'Start'}
+            </div>
         </div>
     </section>
 );
