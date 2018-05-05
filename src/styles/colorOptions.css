@@ -5,9 +5,9 @@
 }
 
 .color-bubble {
-    /* border: 1px solid white; */
+    border: 1px solid transparent;
     box-shadow: 1px 0px 2px rgba(0, 0, 0, 0.15);
-    border-radius: 10px;
+    border-radius: 20px;
     height: 20px;
     opacity: 0.5;
     transition: all 100ms ease-in-out;
@@ -37,6 +37,14 @@
 .yellow {
     background-color: var(--yellow);
     /* background-color: #FFF9C4; */
+}
+
+#app .inherit-color,
+#app .inherit-color-hover,
+#app .inherit-background,
+#app .inherit-border,
+#app .inherit-border-hover { 
+    transition: all var(--animate);
 }
 
 #app.blue .inherit-color { color: var(--blue) }

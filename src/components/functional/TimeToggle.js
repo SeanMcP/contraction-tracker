@@ -1,18 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import Icon from './Icon';
 
 const TimeToggle = (props) => (
     <div
-        className="time-toggle click"
+        className="time-toggle click inherit-color-hover"
         onClick={props.handleChange}
     >
-        <Icon
-            help="Toggle time format"
-            icon="access_time"
-        />
         <span>
-            {props.timeFormat === 'h:mm' ? '12' : '24'}
+            {props.timeFormat === 'h:mm' ? '12 hr' : '24 hr'}
         </span>
     </div>
 );

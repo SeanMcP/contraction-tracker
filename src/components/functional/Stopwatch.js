@@ -7,7 +7,7 @@ const Stopwatch = (props) => (
         <div className="display">
             {insertColon(props.time)}
         </div>
-        <div className="button inherit-color-hover inherit-border-hover" onClick={props.recording ? props.stop : props.start}>
+        <div className="button inherit-color inherit-border-hover" onClick={props.recording ? props.stop : props.start}>
             {props.recording ? 'Stop' : 'Start'}
         </div>
     </section>

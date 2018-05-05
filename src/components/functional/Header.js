@@ -6,7 +6,7 @@ import TimeToggle from './TimeToggle';
 // import whiteLogo from '../../whiteLogo.svg';
 
 const Header = props => (
-    <header>
+    <header className="inherit-border">
         <h1>Contraction Tracker</h1>
         <div className="tools">
             <ColorOptions

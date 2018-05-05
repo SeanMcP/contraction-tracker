@@ -1,5 +1,5 @@
 :root {
-    --animate-normal:  200ms ease-in-out;
+    --animate:  200ms ease-in-out;
     --animate-fast:    100ms ease-in-out;
     --main-bg:         #FFCDD2;
     --main-text:       #333333;

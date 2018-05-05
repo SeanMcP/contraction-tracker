@@ -1,17 +1,19 @@
 section.display {
     display: grid;
-    font-size: 20px;
+    font-size: var(--space);
     font-weight: bold;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-    height: 25px;
-    padding: 0 20px;
+    grid-gap: var(--space);
+    height: 40px;
+    padding: 0 var(--space);
 }
 
 section.display span {
-    margin-left: 5px;
+    margin-left: 4px;
 }
 
 section.display div {
     animation: fade-in 200ms ease-in-out;
+    display: flex;
+    align-items: flex-end;
 }

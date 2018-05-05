@@ -1,8 +1,10 @@
 #app header {
     align-items: center;
+    border-bottom: 1px solid var(--gray-light);
+    /* color: white; */
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    padding: var(--space);
 }
 
 #app header h1 {
@@ -16,7 +18,7 @@
 
 .time-toggle {
     display: flex;
-    margin-left: 20px;
+    margin-left: var(--space);
 }
 
 .time-toggle:hover {

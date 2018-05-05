@@ -1,5 +1,5 @@
 table {
-    padding: 20px;
+    padding: var(--space);
     width: 100%;
 }
 
@@ -17,12 +17,18 @@ tbody.reverse-chronological tr.head {
 }
 
 tr {
-    animation: fade-in 200ms ease-in-out;
+    animation: fade-in var(--animate);
     align-items: center;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 10px;
+    font-size: 14px;
+    grid-template-columns: repeat(4, 1fr) 48px;
+    grid-gap: var(--space-xs);
     justify-items: flex-start;
+    padding: 4px 0;
+}
+
+tr:not(.head) {
+    border-top: 1px solid var(--gray-light);
 }
 
 th, td {
