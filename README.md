@@ -1,6 +1,6 @@
 # Contraction Tracker
 
-A simple way to keep track of your contractions during labor
+🤰 A simple way to keep track of your contractions during labor
 
 ## Reasoning
 
@@ -10,25 +10,27 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 
 ## About
 
-### Utilizing
+### 🛠 Utilizing
 - React
 - Moment.js
 
-### Features
+### ✨ Features
 - Track contractions easily, if not painlessly
 - List contractions in chronological or reverse-chronological order
 - Rank the pain of each contraction on a scale of 0 to !!!
 - Delete accidental entries
 - Change the color of the app to match your fancy
 
-### To-do
+### ☑️ To-do
 - Animate transitions
 - Reset all button
+- Fix bugs
 
-### Considerations
+### 🤔 Considerations
 - Flash notification when frequency is at certain point (change color)
 - Inspirational messages
 - Input/display baby's name
 
-### Bugs
-- *crickets*
+### 🐛 Bugs
+- In table, "Frequency" breaks grid on mobile
+<!-- - *crickets* -->
