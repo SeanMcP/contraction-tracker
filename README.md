@@ -22,10 +22,7 @@ Contraction Tracker seeks to remedy that situation by including a full set of fe
 - Change the color of the app to match your fancy
 
 ### To-do
-- Re-design (using Apple's guidelines)
-- Create (a better) logo and favicon
 - Reset all button
-- Fix positioning on toolbar (too large on small screens)
 
 ### Considerations
 - Flash notification when frequency is at certain point (change color)
