@@ -88,7 +88,7 @@ class App extends React.Component {
         const newRecord = {
             start: this.state.start,
             stop,            
-            rating: 'zero'
+            rating: 0
         };
 
         const record = [...this.state.record];
